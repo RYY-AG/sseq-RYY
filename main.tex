@@ -1,0 +1,229 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{pb-diagram}
+\usepackage{epstopdf}
+\usepackage{CJK}
+\usepackage{bbm}
+\usepackage{multirow}
+\usepackage[mathscr]{eucal}
+\usepackage{epsfig,epsf,epic}
+\usepackage{pdfsync}
+\usepackage{pdfpages}
+\usepackage{enumerate}
+\usepackage{amsmath,amscd}
+\usepackage{color}
+\usepackage{txfonts}
+\usepackage{indentfirst}
+\usepackage[all,cmtip]{xy}
+%\usepackage[notref,notcite]{showkeys}
+
+%\usepackage{citeref}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{float}
+\usetikzlibrary{cd, arrows}
+\usepackage{array}
+\usepackage[british]{babel}
+\usepackage{booktabs}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{multicol}
+\usepackage{pbox}
+\usepackage{pict2e}
+\usepackage{relsize}
+\usepackage{soul}
+\usepackage{stmaryrd}
+\usepackage{tabu}
+\usepackage{todonotes}
+\usepackage[usegeometry,paper=8.5in:11in]{typearea}
+\usepackage{verbatim}
+\usepackage[normalem]{ulem}
+%\usepackage[svgnames]{xcolor}
+\allowdisplaybreaks
+\ExecuteOptions{dvips}
+\marginparwidth 0pt
+\oddsidemargin 1.5 truecm
+\evensidemargin 1.5 truecm
+\marginparsep 0pt
+\topmargin 0pt
+\textheight 22.0 truecm
+\textwidth 14.5 truecm
+\renewcommand{\baselinestretch}{1.5}
+\hypersetup{nolinks=true}
+\newcommand{\fixme}[1]{\marginpar{\parbox{0in}{\fbox{\parbox{0.6255in}{\raggedright \scriptsize #1}}}}}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{que}[thm]{Question}
+\newtheorem{conj}[thm]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{ex}[thm]{Example}
+\newtheorem{notation}[thm]{Notation}
+\newtheorem{exercise}[thm]{Exercise}
+\newtheorem{problem}[thm]{Problem}
+\newcommand{\cat}[1]{\mathscr{#1}}
+\bibliographystyle{amsplain}
+
+\newcommand{\map}{\rightarrow}
+\newcommand{\tmf}{\mathrm{tmf}}
+\newcommand{\mmf}{\mathrm{mmf}}
+\DeclareMathOperator{\Sq}{Sq}
+\newcommand{\ko}{\mathit{ko}}
+\newcommand{\Gam}{\Gamma_\star}
+\DeclareMathOperator{\im}{im}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\kappabar}{\overline{\kappa}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cl}{\mathrm{cl}}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\coker}{coker}
+
+\definecolor{gray}{gray}{0.4}
+\definecolor{green}{rgb}{0, 0.65, 0}
+\definecolor{purple}{rgb}{0.67, 0, 1}
+
+
+
+\textwidth=15cm
+\textheight=21cm
+\oddsidemargin 0.35cm
+\evensidemargin 0.35cm
+
+\parindent=13pt
+
+
+
+
+
+\renewcommand{\appendix}{\par
+   \setcounter{section}{0}%
+   \setcounter{subsection}{0}%
+   \setcounter{subsubsection}{0}%
+   \gdef\thesection{\@Alph\c@section}%
+   \gdef\thesubsection{\@Alph\c@section.\@arabic\c@subsection}%
+   \gdef\theHsection{\@Alph\c@section.}%
+   \gdef\theHsubsection{\@Alph\c@section.\@arabic\c@subsection}%
+   \csname appendixmore\endcsname
+ }
+
+
+
+
+\begin{document}
+
+\includepdf[page=1-4]{postdoc_Cover.pdf}
+
+\pagenumbering{Roman}
+\pagestyle{plain}
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\input{chiabstract.tex}
+\newpage
+
+\noindent
+\begin{center}
+{\Huge {\bf Abstract}}	
+\end{center}	
+\vspace{1.0cm}
+
+\noindent
+
+This report summarizes my postdoctoral research in two areas: digraph homotopy theory and the $\C$-motivic stable homotopy groups of spheres. These two lines of investigation focus respectively on homotopy-theoretic constructions in a discrete setting and periodic phenomena in motivic stable homotopy, together reflecting a sustained exploration of algebraic structures, constructive methods, and periodicity in homotopy theory.
+
+\begin{center}
+\textbf{Part I: Digraph Homotopy Theory}
+\end{center}
+
+Digraphs serve as mathematical models for asymmetric processes and concurrent systems, yet a systematic directed homotopy theory for them remains incomplete. My research in this part aims to establish foundational algebraic topological tools for discrete directed structures.
+
+In \textbf{Chapter 1: Cubical setting for directed discrete homotopy theory}, we introduce a cubical set framework to reformulate the directed homotopy theory of digraphs. For the LWYZ-homotopy groups of digraphs (defined by Li, Wu, Yau, and Zhang in 2024, as a variant of the earlier GLMY-homotopy groups), we prove a Hurewicz theorem: the first nontrivial LWYZ-homotopy group is detected by a certain cubical homology group. This result fills a significant gap in directed discrete homotopy theory by establishing a fundamental homotopy-homology connection.
+
+In \textbf{Chapter 2: Digraph James construction}, we generalize the classical James construction to the category of digraphs via a categorification approach, showing that the James construction of any digraph remains a digraph. We compute the GLMY-homology of the James construction of certain digraph 1-spheres in low dimensions, revealing both connections with and striking differences from the continuous case. On one hand, we observe phenomena that mirror classical behavior; on the other hand, we discover an exotic phenomenon: for a certain digraph 1-sphere, the 1-dimensional GLMY-homology of its James construction vanishes--a scenario that cannot occur in the classical setting. These results demonstrate that the digraph version of the James construction exhibits a richer and more intricate homological structure than its classical counterpart, highlighting the added complexity and challenges posed by directionality in homotopy theory.
+
+\begin{center}
+\textbf{Part II: Exotic Periodic Phenomena in the $\C$-Motivic Stable Homotopy Groups}
+\end{center}
+
+The $\C$-motivic stable homotopy category is related to the classical stable homotopy category via the Betti realization, yet it contains richer periodic structures. My research in this part investigates periodic phenomena in this category, uncovering a family of exotic periodic elements that parallel the classical image J family but exhibit fundamentally different structural properties.
+
+In \textbf{Chapter 3: Exotic periodic phenomena in the cohomology of the moduli stack of 1-dimensional formal group laws}, we analyze the cohomology of the moduli stack of 1-dimensional formal group laws--which is also the $E_2$-page of the classical Adams-Novikov spectral sequence--and identify a periodic structure distinct from the familiar $v_n$-periodicities. This structure displays interesting number-theoretic properties. Using the $\C$-motivic Adams spectral sequence, we transport this periodic structure to the $\C$-motivic stable homotopy category.
+
+In \textbf{Chapter 4: A sparse periodic family in the cohomology of the $\C$-motivic Steenrod algebra}, we discover a sparse periodic family in the cohomology of the 
+$\C$-motivic Steenrod algebra (i.e., the $\C$-motivic Adams $E_2$-page), generated by powers of $h_1$. This family is related both to $h_1$-localization and to the algebraic Hurewicz image of the motivic modular forms spectrum $\mmf$. In contrast to the classical image J family, this family exhibits a markedly sparse pattern in its vanishing range and grading structure, reflecting the unique structural layers introduced by $\tau$-periodicity in the motivic setting.
+
+\begin{center}
+\textbf{Summary of Contributions}
+\end{center}
+
+During my postdoctoral period, the above results have been presented in four research papers. This report systematically reviews the content, methods, and significance of these studies, establishing the Hurewicz theorem as a foundational result in directed discrete homotopy theory and providing new exotic periodic families in the $\C$-motivic stable homotopy groups, thereby illustrating the rich structural diversity of homotopy theory across different contexts. The work presented in Chapters 1 and 2 was conducted in collaboration with Jianzhong Pan and Jie Wu; the work in Chapters 3 and 4 was conducted in collaboration with Dan Isaksen, Hana Jia Kong, Guchuan Li, and Heyi Zhu.
+\vspace{1cm}
+
+{\bf Key words:} Digraph, Cubical set, Hurewicz theorem, James construction, GLMY-homology; $\C$-motivic stable homotopy groups, periodic phenomena.
+
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+\newpage
+\thispagestyle{empty}
+{\large {\tableofcontents}}
+
+\newpage
+\pagenumbering{arabic}
+\input{cc1}
+\input{cc2}
+\input{cc3}
+\input{cc4}
+
+
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\begin{center}
+{\large {\bf Acknowledgements}}
+\end{center}
+
+\vspace{5mm}
+
+\input{acknowledgement}
+
+\bibliography{Bibliography}
+
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Curriculum Vitae}
+\begin{center}
+	{\large {\bf CV}}
+\end{center}
+
+\vspace{5mm}
+
+\input{cv}
+
+\end{document}
